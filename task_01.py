@@ -5,3 +5,22 @@
 # желтый, зеленый). Проверить работу примера, создав экземпляр и вызвав описанный метод.
 # Задачу можно усложнить, реализовав проверку порядка режимов, и при его нарушении выводить соответствующее сообщение и
 # завершать скрипт.
+from time import sleep
+
+
+class TrafficLight:
+    __color = ['Red', 'Yellow', 'Green']
+
+    def running(self):
+        for light in self.__color:
+            print(light)
+            if light == 'Red':
+                sleep(7)
+            elif light == 'Yellow':
+                sleep(2)
+            else:
+                sleep(10)
+
+
+light = TrafficLight()
+light.running()
